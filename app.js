@@ -27,13 +27,6 @@ for (let select of dropdowns){
         })
 
 }
-const updateFlag = (element) => {
-    let currCode = element.value
-    let countryCode = countryList[currCode]
-    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`
-    let img = element.parentElement.querySelector("img")
-    img.src = newSrc 
-}
 btn.addEventListener("click", async (evt) => {
     evt.preventDefault();
     let amount = document.querySelector(".amount input")
@@ -49,3 +42,13 @@ btn.addEventListener("click", async (evt) => {
     let data  = await response.json()
     console.log (data) 
 } ) 
+const updateFlag = (element) => {
+    let currCode = element.value
+    let countryCode = countryList[currCode]
+    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`
+    let img = element.parentElement.querySelector("img")
+    img.src = newSrc 
+}
+$(document).ready(function (){
+    alert(1)
+}) 
