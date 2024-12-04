@@ -51,4 +51,7 @@ const updateFlag = (element) => {
 }
 $(document).ready(function (){
     alert(1)
+    $(window).resize(function(){
+        console.log("you are scrolling")
+    })
 }) 
